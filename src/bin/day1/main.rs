@@ -29,5 +29,4 @@ fn main() {
     let top_total = totals.iter().take(top).sum::<u64>();
 
     println!("top {top} carries a total of {top_total} calories!");
-
 }
