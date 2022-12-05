@@ -1,5 +1,5 @@
 // https://adventofcode.com/2022/day/3
-// (part1) cargo run --bin day3
+// cargo run --bin day3
 use std::collections::HashSet;
 
 fn score(c: char) -> u32 {

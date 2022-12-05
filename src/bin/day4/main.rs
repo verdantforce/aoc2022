@@ -1,11 +1,11 @@
 // https://adventofcode.com/2022/day/3
-// (part1) cargo run --bin day4
+// cargo run --bin day4
 use std::str::FromStr;
 
 #[derive(Debug, Clone)]
 struct Range {
     start: u32,
-    end: u32
+    end: u32,
 }
 
 impl Range {
@@ -34,30 +34,38 @@ impl FromStr for Range {
 }
 
 fn part1(input: &str) {
-    let answer: u32 = input.lines().map(
-        |line| {
-            let v: Vec<Range> = line.split(',').map(|s| Range::from_str(s).unwrap()).collect();
+    let answer: u32 = input
+        .lines()
+        .map(|line| {
+            let v: Vec<Range> = line
+                .split(',')
+                .map(|s| Range::from_str(s).unwrap())
+                .collect();
             if v[0].contains(&v[1]) || v[1].contains(&v[0]) {
                 1
             } else {
                 0
             }
-        }
-    ).sum();
+        })
+        .sum();
     println!("part1: {answer}");
 }
 
 fn part2(input: &str) {
-    let answer: u32 = input.lines().map(
-        |line| {
-            let v: Vec<Range> = line.split(',').map(|s| Range::from_str(s).unwrap()).collect();
+    let answer: u32 = input
+        .lines()
+        .map(|line| {
+            let v: Vec<Range> = line
+                .split(',')
+                .map(|s| Range::from_str(s).unwrap())
+                .collect();
             if v[0].overlaps(&v[1]) {
                 1
             } else {
                 0
             }
-        }
-    ).sum();
+        })
+        .sum();
     println!("part2: {answer}");
 }
 

@@ -1,10 +1,10 @@
 // https://adventofcode.com/2022/day/2
-// (part1) cargo run --bin day2
+// cargo run --bin day2
 
-// opponent score
+// Notes
 // 'A' -> Rock, 'B' -> Paper, 'C' -> Scissors
 // 'X' -> Rock, 'Y' -> Paper, 'Z' -> Scissors
-// value Rock -> 1, Paper -> 2, Scissors -> 3
+//  Rock -> 1, Paper -> 2, Scissors -> 3
 
 struct Score {
     me: i32,
